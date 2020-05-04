@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="0Dq-Ek-QSr">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <viewController id="gXi-dB-Fvh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ui1-xP-UOC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="recordati logo" translatesAutoresizingMaskIntoConstraints="NO" id="PMU-xv-uIH">
-                                <rect key="frame" x="20" y="382" width="374" height="142"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rx-c9-U9U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PMU-xv-uIH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4TK-D2-ccs"/>
-                            <constraint firstAttribute="trailing" secondItem="PMU-xv-uIH" secondAttribute="trailing" constant="20" symbolic="YES" id="6A3-1d-5nb"/>
-                            <constraint firstItem="PMU-xv-uIH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="II0-nD-fQA"/>
-                            <constraint firstItem="PMU-xv-uIH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c7e-Pb-wcb"/>
+                            <constraint firstItem="2Rx-c9-U9U" firstAttribute="leading" secondItem="JEG-Hp-mBy" secondAttribute="leading" id="ZUl-fE-Kcy"/>
+                            <constraint firstItem="JEG-Hp-mBy" firstAttribute="trailing" secondItem="2Rx-c9-U9U" secondAttribute="trailing" id="ZnD-CJ-dYA"/>
+                            <constraint firstItem="2Rx-c9-U9U" firstAttribute="top" secondItem="JEG-Hp-mBy" secondAttribute="top" id="dJD-hd-YyX"/>
+                            <constraint firstItem="JEG-Hp-mBy" firstAttribute="bottom" secondItem="2Rx-c9-U9U" secondAttribute="bottom" id="gQi-un-yPf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="JEG-Hp-mBy"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKd-lB-Zlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="48" y="255"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="recordati logo" width="430.66665649414062" height="142"/>
-    </resources>
 </document>

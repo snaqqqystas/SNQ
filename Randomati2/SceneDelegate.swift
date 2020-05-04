@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                self.window = window
+               
+                if PFUser.current() == nil{
+                    showMain()
+                } else {
+                    showLogin()
+                }
+
+            }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,6 +61,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func showLogin() {
+          let loginVC = PFLogInViewController()
+          loginVC.delegate = self
+          loginVC.signUpController?.delegate = self
+          window?.rootViewController = loginVC
+                        window?.makeKeyAndVisible()
+      }
+      
+      func showMain() {
+          let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                 window?.rootViewController = mainStoryboard.instantiateInitialViewController()
+                 window?.makeKeyAndVisible()
+          
+      }
+    
+}
 
+extension SceneDelegate: PFLogInViewControllerDelegate {
+    func log(_ logInController: PFLogInViewController, didLogIn user: PFUser) {
+     showMain()
+    }
+}
+
+extension SceneDelegate: PFSignUpViewControllerDelegate {
+    func signUpViewController(_ signUpController: PFSignUpViewController, didSignUp user: PFUser) {
+        let alertViewController = UIAlertController(title: "Success!", message: "U signed up", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            signUpController.dismiss(animated: true, completion: nil)
+        }
+        alertViewController.addAction(okAction)
+        signUpController.present(alertViewController, animated: true, completion: nil)
+    }
+    
 }
 

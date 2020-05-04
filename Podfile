@@ -16,9 +16,7 @@ target 'Randomati2' do
     # Pods for testing
   end
 
-Pod 'Parse'
-
-Pod 'Parse 
+pod 'Parse'
 
 pod 'Parse/UI'
 
